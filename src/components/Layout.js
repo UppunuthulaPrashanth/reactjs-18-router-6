@@ -1,13 +1,13 @@
 import React from 'react'
 import Header from './Header'
-import Navbar from './Navbar'
+import Navigationbar from './Navigationbar'
 import Footer from './Footer'
 
 export default function Layout(props) {
   return (
-    <div className='container'>
+    <div className='container layout'>
         <Header/>
-        <Navbar/>
+        <Navigationbar/>
         <main>{props.children}</main>
         <Footer/>
     </div>
