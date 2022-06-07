@@ -4,11 +4,15 @@ import Home from './pages/Home'
 import Products from './pages/Products'
 import Login from './pages/Login'
 import PrivateRoutes from './utils/PrivateRoutes'
+import Layout from './components/Layout';
 
 function App() {
   return (
     <div className="App">
+          <>
+
         <Router>
+          <Layout>
           <Routes>
             <Route element={<PrivateRoutes />}>
                 <Route element={<Home/>} path="/" exact/>
@@ -16,7 +20,9 @@ function App() {
             </Route>
             <Route element={<Login/>} path="/login"/>
           </Routes>
+          </Layout>
       </Router>
+      </>
     </div>
   );
 }
